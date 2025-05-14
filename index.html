@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Page pour mon resto</title>
+        <meta charset="UTF-8">
+        <meta name="description" content=" Page de restauration pour passer des commende en ligne ">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body{
+    font-family: serif;
+    background-color: rgb(150, 127, 255);
+    background: url(./img/BG.jpg) center/cover;
+    min-height: 100vh ;
+}
+/* *{
+    padding 0px;
+    margin 0px;
+} */
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 8px #000084;
+    color: rgba(249, 14, 14, 0.855);
+    text-decoration: underline;
+    font-family: fantasy, sans-serif;
+} 
+main {
+    min-height: 500px;
+    width: 90%;
+    background: rgba(255, 0, 0, 0.59);
+    margin: 0 auto;
+    border: 2px solid blue;
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px 20px rgb(0, 0, 0);
+    padding: 15px;
+}
+h2{
+    margin: 0px;
+}
+.flexbox , 
+.grid,
+.absolute {
+    border: 2px dashed black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 150px;
+}
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.flexbox li {
+    letter-spacing: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: turquoise;
+    /* Centrer un unique élément horizontalement et verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.grid-container img {
+    width: 200px;
+    margin: 20px auto;
+    display: flex;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+input, textarea {
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 8px;
+
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#Dj {
+    grid-area: bt;
+    cursor: pointer;
+    background: orange;
+    transition: 0,2s;
+}
+
+#Dj:hover {
+    background: skyblue;
+    color: aliceblue;
+}
+.absolute {
+    position: relative;
+}
+
+#circle1 {
+    height: 80px;
+    width: 80px;
+    background: skyblue;
+    position: absolute;
+    border-radius: 150px;
+    top: 0px;
+    right: 0;
+}
+#circle2 {
+    height: 40px;
+    width: 40px;
+    background: teal;
+    position: absolute;
+    border-radius: 150px;  
+    left: 50%;  
+    transform: translateX(-50px);
+    top: 100px;
+}
+@media screen and (max-width: 900px) {
+    .grid-container {
+        display: block;
+        margin: 20px auto;
+    }
+    .grid-container {
+        width: 3OOpx;
+    }
+}
+@media screen and (max-width: 400px) {
+    .flexbox ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    form {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "i1"
+    "i2"
+    "ta"
+    "bt";
+    }
+    
+}
+
+        </style>
+    </head>
+    <body>
+        <iframe src="Menu.html" width="560" height="315" frameborder="0" allow="autoplay; encripted-media" allowfullscreen></iframe>
+        <a href="img/3.jpeg" target="_blank">
+        <img src="img/3.jpeg" alt="ima cool de manga : peut importe" width="1400" height="500">
+        </a>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">PLats d'entrée</th>
+                </tr>
+                <tr>
+                    <th>Plats</th>
+                    <td>Prix</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Salade</th>
+                    <td>500F</td>
+                </tr>
+                <tr>
+                    <th>Frite</th>
+                    <td>400F</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Plats de résistance</th>
+                </tr>
+                <tr>
+                    <th>Pome frite</th>
+                    <td>100F</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2">On peut img tb</th>
+                </tr>
+            </tfoot>
+        </table>
+        <h1> BIEN VENUE SUR LE SITE DU RESTO &quot;CHEZ DIANO&quot;</h1>
+        <p> Veuiller cliquer sur la touche &lt;menu&gt; pour <em>accéder</em> au menu de notre <strong>Restaurant</strong><br>
+            <main>
+                <div class="flexbox">
+                    <h2>flexbox</h2>
+                    <ul>
+                        <li>boite 1</li>
+                        <li>boite 2</li>
+                        <li>boite 3</li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h2>Grid</h2>
+                    <div class="grid-container">
+                        <img src="./img/cool.jpeg" alt="pilier de l'eau">
+
+                        <form action="">
+                            <input type="text" alt="nom" placeholder="Nom">
+                            <input type="text" alt="Prénom" placeholder="Prénom">
+                            <textarea name="message"  cols="30" rows="10" placeholder="Entrez votre message"></textarea>
+                            <input type="submit" value="Envoyer" id="Dj">
+                        </form>
+                    </div>
+                </div>
+                <div class="absolute">
+                    <h2>Absolute</h2>
+                    <span id="circle1"></span>
+                    <span id="circle2"></span>
+                </div>
+            </main>
+            <a href="Menu.html">Menu</a>
+            <a href="web.html#BOOF"> retour web</a>
+            <a href="Contact.html"> Nos contact</a>
+        </p>
+    </body>  
+</html>
+    
